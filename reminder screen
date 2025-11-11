@@ -1,32 +1,6 @@
-import 'package:flutter/material.dart';
-
-/// Simple in-memory reminder model
-class Reminder {
-  Reminder({
-    required this.title,
-    required this.dateTime,
-    this.category = 'General',
-    this.frequency = RepeatFrequency.none,
-    this.notify = true,
-    this.isDone = false,
-  });
-
-  String title;
-  DateTime dateTime;
-  String category;
-  RepeatFrequency frequency;
-  bool notify;
-  bool isDone;
-}
-
-enum RepeatFrequency { none, daily, weekly, monthly }
 
 
-extension RepeatFrequencyLabel on RepeatFrequency {
-String get label => switch (this) {
-RepeatFrequency.none => 'No repeat',
-RepeatFrequency.daily => 'Daily',
-RepeatFrequency.weekly => 'Weekly',
-RepeatFrequency.monthly => 'Monthly',
-};
-}
+flutter create 
+
+
+
