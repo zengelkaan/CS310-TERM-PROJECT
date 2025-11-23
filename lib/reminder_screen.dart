@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// RENKLER
+// COLORS
 const Color primaryPink = Color(0xFFC1485F);
 const Color cardPink = Color(0xFFDEB9C0);
 const Color lightPink = Color(0xFFC6A2A3);
@@ -39,7 +39,7 @@ class Pet {
   });
 }
 
-// Global liste – Hayvanlarım sayfasıyla da paylaşılabilir
+// Global list
 final List<Pet> allPets = [
   Pet(
     name: "Max",
@@ -99,7 +99,7 @@ class _ReminderScreenState extends State<ReminderScreen> {
         centerTitle: true,
       ),
 
-      // --- Bottom Navigation: HomeScreen ile aynı ikonlar, 7 adet ---
+      // --- Bottom Navigation:  ---
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
@@ -238,7 +238,7 @@ class _PetCard extends StatelessWidget {
 }
 
 // ===================================================================
-// VACCINATION CARD (toggle + beyaz yazı)
+// VACCINATION CARD
 // ===================================================================
 
 class _VaccinationCard extends StatelessWidget {
