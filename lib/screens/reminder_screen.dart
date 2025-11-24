@@ -73,9 +73,12 @@ class _ReminderScreenState extends State<ReminderScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black87),
-          onPressed: () => Navigator.pop(context),
-        ),
+       icon: const Icon(Icons.arrow_back, color: Colors.black87),
+      onPressed: () {
+       Navigator.pushReplacementNamed(context, '/home');
+  },
+),
+
         title: const Text(
           "Vaccination Reminders",
           style: TextStyle(
