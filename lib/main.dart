@@ -33,7 +33,7 @@ class Pet {
   final String breed;
   final String gender;
   final String age;
-  final String imagePath; // asset path
+  final String imagePath; 
 
   const Pet({
     required this.name,
