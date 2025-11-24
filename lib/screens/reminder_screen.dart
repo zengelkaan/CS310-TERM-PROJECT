@@ -86,7 +86,7 @@ class _ReminderScreenState extends State<ReminderScreen> {
       ),
 
       // Using Home index as it's accessed from Home
-      bottomNavigationBar: const CustomBottomNav(currentIndex: 0),
+      bottomNavigationBar: const CustomBottomNav(currentIndex: 4),
 
       body: ListView(
         padding: const EdgeInsets.all(16),
