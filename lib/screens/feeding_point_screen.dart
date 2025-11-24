@@ -1,11 +1,37 @@
 import 'package:flutter/material.dart';
 import '../widgets/custom_bottom_nav.dart';
+import '../widgets/map_preview.dart'; // Import MapPreview widget
+import '../models/feeding_point_manager.dart';
 
-class FeedingPointsScreen extends StatelessWidget {
+class FeedingPointsScreen extends StatefulWidget {
   const FeedingPointsScreen({super.key});
 
   @override
+  State<FeedingPointsScreen> createState() => _FeedingPointsScreenState();
+}
+
+class _FeedingPointsScreenState extends State<FeedingPointsScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Listen to changes in FeedingPointManager
+    FeedingPointManager().addListener(_updateList);
+  }
+
+  @override
+  void dispose() {
+    FeedingPointManager().removeListener(_updateList);
+    super.dispose();
+  }
+
+  void _updateList() {
+    setState(() {});
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final feedingPoints = FeedingPointManager().feedingPoints;
+
     return Scaffold(
       backgroundColor: const Color(0xFFF8F8F8),
       body: SafeArea(
@@ -14,54 +40,32 @@ class FeedingPointsScreen extends StatelessWidget {
             const TopSearchBar(),
             const FilterRow(),
             const SizedBox(height: 8),
-            // Map placeholder
-            Container(
-              height: 220,
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              decoration: BoxDecoration(
-                color: const Color(0xFFE4E7EE),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              alignment: Alignment.center,
-              clipBehavior: Clip.antiAlias,
-              child: Image.asset(
-                'assets/images/map.jpg',
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: double.infinity,
-                errorBuilder: (context, error, stackTrace) => const Text(
-                  'Map View',
-                  style: TextStyle(color: Colors.black54),
-                ),
-              ),
-            ),
+            // Map Preview Widget
+            const MapPreview(),
             const SizedBox(height: 12),
             // List of feeding points
             Expanded(
-              child: ListView(
-                padding:
-                const EdgeInsets.symmetric(horizontal: 16),
-                children: const [
-                  FeedingPointCard(
-                    title: 'Dormitory',
-                    imageUrl: 'assets/images/dormitory.jpg',
-                    buttonText: 'Get Directions',
-                  ),
-                  SizedBox(height: 12),
-                  FeedingPointCard(
-                    title: 'Faculty of Engineering',
-                    imageUrl: 'assets/images/engineering.jpg',
-                    buttonText: 'Get Directions',
-                  ),
-                ],
+              child: ListView.builder(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                itemCount: feedingPoints.length,
+                itemBuilder: (context, index) {
+                  final point = feedingPoints[index];
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 12),
+                    child: FeedingPointCard(
+                      title: point.title,
+                      imageUrl: point.imageUrl,
+                      buttonText: point.buttonText,
+                    ),
+                  );
+                },
               ),
             ),
           ],
         ),
       ),
       bottomNavigationBar: const CustomBottomNav(currentIndex: 3), // Index 3 for Feeding
-      floatingActionButtonLocation:
-      FloatingActionButtonLocation.endFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, '/add_feeding_point');
@@ -79,8 +83,7 @@ class TopSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-      const EdgeInsets.fromLTRB(16, 8, 16, 4),
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -108,12 +111,11 @@ class TopSearchBar extends StatelessWidget {
           Container(
             height: 44,
             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(22),
-              boxShadow: const [
-                 BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2))
-              ]
-            ),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(22),
+                boxShadow: const [
+                  BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, 2))
+                ]),
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Row(
               children: [
@@ -145,8 +147,7 @@ class FilterRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-      const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       child: Row(
         children: [
           _FilterChipButton(
@@ -183,7 +184,6 @@ class _FilterChipButton extends StatelessWidget {
     required this.label,
     required this.icon,
     required this.onTap,
-    super.key,
   });
 
   @override
@@ -192,13 +192,11 @@ class _FilterChipButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(20),
       onTap: onTap,
       child: Container(
-        padding:
-        const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
-          border:
-          Border.all(color: const Color(0xFFE0E0E0)),
+          border: Border.all(color: const Color(0xFFE0E0E0)),
         ),
         child: Row(
           children: [
@@ -243,17 +241,16 @@ class FeedingPointCard extends StatelessWidget {
               imageUrl,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
-                  return Container(
-                      color: Colors.grey,
-                      child: const Center(child: Icon(Icons.image_not_supported, color: Colors.white))
-                  );
+                return Container(
+                    color: Colors.grey,
+                    child: const Center(
+                        child: Icon(Icons.image_not_supported, color: Colors.white)));
               },
             ),
           ),
 
           Padding(
-            padding:
-            const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             child: Text(
               title,
               style: const TextStyle(
@@ -264,8 +261,7 @@ class FeedingPointCard extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Padding(
-            padding:
-            const EdgeInsets.fromLTRB(12, 0, 12, 12),
+            padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
             child: SizedBox(
               height: 40,
               width: 160,
