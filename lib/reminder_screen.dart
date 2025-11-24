@@ -1,3 +1,6 @@
+//Hilal Ongel
+//I have draft of reminders screen and vaccination date screen below. Updated version is given in Development brunch
+
 import 'package:flutter/material.dart';
 
 // COLORS
@@ -39,7 +42,7 @@ class Pet {
   });
 }
 
-// Global list
+// Global
 final List<Pet> allPets = [
   Pet(
     name: "Max",
@@ -107,7 +110,7 @@ class _ReminderScreenState extends State<ReminderScreen> {
         unselectedItemColor: Colors.black45,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        currentIndex: 0, // Reminders: index 0 (zil)
+        currentIndex: 0, // Reminders: index 0 
         onTap: (index) {
           if (index == 3) {
             // Home 
