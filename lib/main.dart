@@ -14,7 +14,7 @@ class PawfectApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
-        fontFamily: 'Roboto', // pubspec.yaml’da kendi fontunu ayarla
+        fontFamily: 'Roboto', // font arranging
       ),
       initialRoute: '/animals',
       routes: {
