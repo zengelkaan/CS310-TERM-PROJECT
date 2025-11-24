@@ -3,7 +3,7 @@ import '../models/pet.dart';
 import '../models/vaccination.dart';
 import '../widgets/custom_bottom_nav.dart';
 
-// RENKLER
+// COLORS
 const Color primaryPink = Color(0xFFC1485F);
 const Color cardPink = Color(0xFFDEB9C0);
 const Color lightPink = Color(0xFFC6A2A3);
@@ -13,7 +13,7 @@ const Color badgeRed = Color(0xFFFF7676);
 const Color successGreen = Color(0xFF3CB371);
 
 
-// Global liste – Hayvanlarım sayfasıyla da paylaşılabilir
+// Global list for info of my pets
 // In a real app, this would be in a Provider/Controller
 final List<Pet> allPets = [
   Pet(
@@ -83,7 +83,7 @@ class _ReminderScreenState extends State<ReminderScreen> {
       ),
 
       // Using Home index as it's accessed from Home
-      bottomNavigationBar: const CustomBottomNav(currentIndex: 0),
+      bottomNavigationBar: const CustomBottomNav(currentIndex: 4),
 
       body: ListView(
         padding: const EdgeInsets.all(16),
@@ -190,7 +190,7 @@ class _PetCard extends StatelessWidget {
 }
 
 // ===================================================================
-// VACCINATION CARD (toggle + beyaz yazı)
+// VACCINATION CARD
 // ===================================================================
 
 class _VaccinationCard extends StatelessWidget {
@@ -275,7 +275,7 @@ class _VaccinationCard extends StatelessWidget {
 }
 
 // ===================================================================
-// BOTTOM SHEET → YENİ VACCINATION DÖNDERİR
+// BOTTOM SHEET 
 // ===================================================================
 
 Future<Vaccination?> _showAddVaccinationBottomSheet(
@@ -308,7 +308,7 @@ Future<Vaccination?> _showAddVaccinationBottomSheet(
 }
 
 // ===================================================================
-// FORM – gerçek input + Save Record → yeni Vaccination
+// FORM –  input + Save Record → new Vaccination
 // ===================================================================
 
 class _AddVaccinationForm extends StatefulWidget {
