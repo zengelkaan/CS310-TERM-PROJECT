@@ -98,8 +98,8 @@ class _ReminderScreenState extends State<ReminderScreen> {
         ),
         centerTitle: true,
       ),
-
-      // --- Bottom Navigation:  ---
+//I did below to see what I did on a app clearly. It is draft.IT HAS TO CHANGE !
+      // --- Bottom Navigation:  --- 
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
@@ -110,14 +110,14 @@ class _ReminderScreenState extends State<ReminderScreen> {
         currentIndex: 0, // Reminders: index 0 (zil)
         onTap: (index) {
           if (index == 3) {
-            // Home ikonu
+            // Home 
             Navigator.pushReplacementNamed(context, '/home');
           }
-          // Diğer indexler şimdilik boş
+          // 
         },
         items: const [
           BottomNavigationBarItem(
-              icon: Icon(Icons.notifications_none), label: ''), // 0: zil
+              icon: Icon(Icons.notifications_none), label: ''), // 0: 
           BottomNavigationBarItem(
               icon: Icon(Icons.volunteer_activism), label: ''), // 1
           BottomNavigationBarItem(
@@ -323,7 +323,7 @@ class _VaccinationCard extends StatelessWidget {
 }
 
 // ===================================================================
-// BOTTOM SHEET → YENİ VACCINATION DÖNDERİR
+// BOTTOM SHEET 
 // ===================================================================
 
 Future<Vaccination?> _showAddVaccinationBottomSheet(
@@ -356,7 +356,7 @@ Future<Vaccination?> _showAddVaccinationBottomSheet(
 }
 
 // ===================================================================
-// FORM – gerçek input + Save Record → yeni Vaccination
+// FORM –  input + Save Record → new Vaccination
 // ===================================================================
 
 class _AddVaccinationForm extends StatefulWidget {
