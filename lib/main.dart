@@ -86,7 +86,7 @@ class AppBottomNav extends StatelessWidget {
         Navigator.pushReplacementNamed(context, '/chats');
         break;
       default:
-      // diğer ikonlar sadece görsel, route’a bağlamadım
+      
     }
   }
 
