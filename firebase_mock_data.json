@@ -1,0 +1,608 @@
+{
+  "users": {
+    "user1": {
+      "uid": "user1",
+      "email": "mehmet.salcan@example.com",
+      "name": "Mehmet Salcan",
+      "profileImageUrl": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+      "phoneNumber": "+905551234567",
+      "location": {
+        "city": "Istanbul",
+        "address": "Sabanci University, Orhanli, Tuzla",
+        "coordinates": {
+          "latitude": 40.8931,
+          "longitude": 29.3762
+        }
+      },
+      "createdAt": "2024-01-15T10:00:00Z",
+      "updatedAt": "2024-12-01T10:00:00Z",
+      "bio": "Pet lover and owner of 3 beautiful cats"
+    },
+    "user2": {
+      "uid": "user2",
+      "email": "emir.ozyesil@example.com",
+      "name": "Emir Özyeşil",
+      "profileImageUrl": "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg",
+      "phoneNumber": "+905559876543",
+      "location": {
+        "city": "Istanbul",
+        "address": "Kadikoy, Istanbul",
+        "coordinates": {
+          "latitude": 40.9833,
+          "longitude": 29.0167
+        }
+      },
+      "createdAt": "2024-02-20T14:30:00Z",
+      "updatedAt": "2024-12-01T14:30:00Z",
+      "bio": "Dog breeder specializing in Golden Retrievers"
+    },
+    "user3": {
+      "uid": "user3",
+      "email": "irem.ulusal@example.com",
+      "name": "İrem Ulusal",
+      "profileImageUrl": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+      "phoneNumber": "+905556789012",
+      "location": {
+        "city": "Istanbul",
+        "address": "Besiktas, Istanbul",
+        "coordinates": {
+          "latitude": 41.0422,
+          "longitude": 29.0089
+        }
+      },
+      "createdAt": "2024-03-10T09:15:00Z",
+      "updatedAt": "2024-12-01T09:15:00Z",
+      "bio": "Cat enthusiast and volunteer at animal shelters"
+    },
+    "user4": {
+      "uid": "user4",
+      "email": "hilal.ongel@example.com",
+      "name": "Hilal Öngel",
+      "profileImageUrl": "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+      "phoneNumber": "+905554321098",
+      "location": {
+        "city": "Istanbul",
+        "address": "Sisli, Istanbul",
+        "coordinates": {
+          "latitude": 41.0602,
+          "longitude": 28.9878
+        }
+      },
+      "createdAt": "2024-01-25T16:45:00Z",
+      "updatedAt": "2024-12-01T16:45:00Z",
+      "bio": "Veterinarian and animal rights activist"
+    },
+    "user5": {
+      "uid": "user5",
+      "email": "kaan.zengil@example.com",
+      "name": "Kaan Zengil",
+      "profileImageUrl": "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg",
+      "phoneNumber": "+905557654321",
+      "location": {
+        "city": "Istanbul",
+        "address": "Sabanci University Campus",
+        "coordinates": {
+          "latitude": 40.8931,
+          "longitude": 29.3762
+        }
+      },
+      "createdAt": "2024-04-05T11:20:00Z",
+      "updatedAt": "2024-12-01T11:20:00Z",
+      "bio": "Student and pet owner"
+    },
+    "user6": {
+      "uid": "user6",
+      "email": "emily.clark@example.com",
+      "name": "Emily Clark",
+      "profileImageUrl": "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+      "phoneNumber": "+905551112233",
+      "location": {
+        "city": "Istanbul",
+        "address": "Nisantasi, Istanbul",
+        "coordinates": {
+          "latitude": 41.0465,
+          "longitude": 28.9856
+        }
+      },
+      "createdAt": "2024-05-12T13:00:00Z",
+      "updatedAt": "2024-12-01T13:00:00Z",
+      "bio": "Golden Retriever owner looking for breeding partner"
+    }
+  },
+  "pets": {
+    "pet1": {
+      "ownerId": "user1",
+      "name": "Bal",
+      "kind": "Cat",
+      "breed": "Persian",
+      "gender": "Female",
+      "age": "2 years",
+      "ageInMonths": 24,
+      "photos": [
+        "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg",
+        "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg"
+      ],
+      "about": "Bal is a beautiful Persian cat. She is very friendly and loves to cuddle. Looking for a mate for responsible breeding.",
+      "purpose": "Both",
+      "available": true,
+      "createdAt": "2024-06-01T10:00:00Z",
+      "updatedAt": "2024-12-01T10:00:00Z",
+      "status": "active"
+    },
+    "pet2": {
+      "ownerId": "user1",
+      "name": "Şimanski",
+      "kind": "Cat",
+      "breed": "British Shorthair",
+      "gender": "Male",
+      "age": "3 years",
+      "ageInMonths": 36,
+      "photos": [
+        "https://images.pexels.com/photos/2071873/pexels-photo-2071873.jpeg"
+      ],
+      "about": "Şimanski is a calm and gentle British Shorthair. Perfect temperament for breeding.",
+      "purpose": "Dating",
+      "available": true,
+      "createdAt": "2024-06-05T14:20:00Z",
+      "updatedAt": "2024-12-01T14:20:00Z",
+      "status": "active"
+    },
+    "pet3": {
+      "ownerId": "user1",
+      "name": "Limon",
+      "kind": "Cat",
+      "breed": "Siamese",
+      "gender": "Female",
+      "age": "1 year",
+      "ageInMonths": 12,
+      "photos": [
+        "https://images.pexels.com/photos/127028/pexels-photo-127028.jpeg"
+      ],
+      "about": "Limon is a playful Siamese kitten. Very energetic and social.",
+      "purpose": "Adoption",
+      "available": true,
+      "createdAt": "2024-07-10T09:30:00Z",
+      "updatedAt": "2024-12-01T09:30:00Z",
+      "status": "active"
+    },
+    "pet4": {
+      "ownerId": "user2",
+      "name": "Max",
+      "kind": "Dog",
+      "breed": "Golden Retriever",
+      "gender": "Male",
+      "age": "3 years",
+      "ageInMonths": 36,
+      "photos": [
+        "https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg",
+        "https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg"
+      ],
+      "about": "Max is a healthy 3-year-old Golden Retriever looking for his first mate. Friendly, energetic, and ready to breed responsibly!",
+      "purpose": "Dating",
+      "available": true,
+      "createdAt": "2024-08-15T11:00:00Z",
+      "updatedAt": "2024-12-01T11:00:00Z",
+      "status": "active"
+    },
+    "pet5": {
+      "ownerId": "user6",
+      "name": "Luna",
+      "kind": "Cat",
+      "breed": "Siamese",
+      "gender": "Female",
+      "age": "2 years",
+      "ageInMonths": 24,
+      "photos": [
+        "https://images.pexels.com/photos/127028/pexels-photo-127028.jpeg"
+      ],
+      "about": "Luna is a beautiful Siamese cat with striking blue eyes. Very affectionate and well-behaved.",
+      "purpose": "Both",
+      "available": true,
+      "createdAt": "2024-09-20T15:45:00Z",
+      "updatedAt": "2024-12-01T15:45:00Z",
+      "status": "active"
+    },
+    "pet6": {
+      "ownerId": "user5",
+      "name": "Coco",
+      "kind": "Rabbit",
+      "breed": "Holland Lop",
+      "gender": "Female",
+      "age": "1 year",
+      "ageInMonths": 12,
+      "photos": [
+        "https://images.pexels.com/photos/4588052/pexels-photo-4588052.jpeg"
+      ],
+      "about": "Coco is a cute Holland Lop rabbit. Very gentle and friendly. Looking for a good home.",
+      "purpose": "Adoption",
+      "available": true,
+      "createdAt": "2024-10-05T10:20:00Z",
+      "updatedAt": "2024-12-01T10:20:00Z",
+      "status": "active"
+    },
+    "pet7": {
+      "ownerId": "user3",
+      "name": "Bella",
+      "kind": "Dog",
+      "breed": "Labrador Retriever",
+      "gender": "Female",
+      "age": "4 years",
+      "ageInMonths": 48,
+      "photos": [
+        "https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg"
+      ],
+      "about": "Bella is a well-trained Labrador. Great with kids and other pets.",
+      "purpose": "Adoption",
+      "available": true,
+      "createdAt": "2024-11-01T12:00:00Z",
+      "updatedAt": "2024-12-01T12:00:00Z",
+      "status": "active"
+    },
+    "pet8": {
+      "ownerId": "user4",
+      "name": "Charlie",
+      "kind": "Dog",
+      "breed": "German Shepherd",
+      "gender": "Male",
+      "age": "2 years",
+      "ageInMonths": 24,
+      "photos": [
+        "https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg"
+      ],
+      "about": "Charlie is a strong and loyal German Shepherd. Perfect for families.",
+      "purpose": "Both",
+      "available": true,
+      "createdAt": "2024-11-10T09:00:00Z",
+      "updatedAt": "2024-12-01T09:00:00Z",
+      "status": "active"
+    }
+  },
+  "feedingPoints": {
+    "feedingPoint1": {
+      "creatorId": "user5",
+      "title": "Dormitory",
+      "description": "Feeding point near the university dormitory entrance",
+      "location": {
+        "address": "Sabanci University Dormitory, Orhanli, Tuzla, Istanbul",
+        "coordinates": {
+          "latitude": 40.8931,
+          "longitude": 29.3762
+        }
+      },
+      "imageUrl": "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg",
+      "verified": true,
+      "rating": 4.5,
+      "ratingsCount": 12,
+      "createdAt": "2024-09-15T10:00:00Z",
+      "updatedAt": "2024-12-01T10:00:00Z",
+      "active": true
+    },
+    "feedingPoint2": {
+      "creatorId": "user5",
+      "title": "Faculty of Engineering",
+      "description": "Feeding station at the engineering building entrance",
+      "location": {
+        "address": "Sabanci University Faculty of Engineering, Orhanli, Tuzla, Istanbul",
+        "coordinates": {
+          "latitude": 40.8950,
+          "longitude": 29.3780
+        }
+      },
+      "imageUrl": "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg",
+      "verified": true,
+      "rating": 4.2,
+      "ratingsCount": 8,
+      "createdAt": "2024-09-20T14:30:00Z",
+      "updatedAt": "2024-12-01T14:30:00Z",
+      "active": true
+    },
+    "feedingPoint3": {
+      "creatorId": "user3",
+      "title": "Library Entrance",
+      "description": "Small feeding area near the library",
+      "location": {
+        "address": "Sabanci University Library, Orhanli, Tuzla, Istanbul",
+        "coordinates": {
+          "latitude": 40.8920,
+          "longitude": 29.3770
+        }
+      },
+      "imageUrl": "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg",
+      "verified": false,
+      "rating": 4.0,
+      "ratingsCount": 5,
+      "createdAt": "2024-10-10T09:15:00Z",
+      "updatedAt": "2024-12-01T09:15:00Z",
+      "active": true
+    },
+    "feedingPoint4": {
+      "creatorId": "user1",
+      "title": "Student Center",
+      "description": "Feeding point at the student center parking area",
+      "location": {
+        "address": "Sabanci University Student Center, Orhanli, Tuzla, Istanbul",
+        "coordinates": {
+          "latitude": 40.8940,
+          "longitude": 29.3750
+        }
+      },
+      "imageUrl": "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg",
+      "verified": true,
+      "rating": 4.8,
+      "ratingsCount": 15,
+      "createdAt": "2024-10-25T11:00:00Z",
+      "updatedAt": "2024-12-01T11:00:00Z",
+      "active": true
+    },
+    "feedingPoint5": {
+      "creatorId": "user4",
+      "title": "Campus Gate",
+      "description": "Main entrance feeding station",
+      "location": {
+        "address": "Sabanci University Main Gate, Orhanli, Tuzla, Istanbul",
+        "coordinates": {
+          "latitude": 40.8900,
+          "longitude": 29.3740
+        }
+      },
+      "imageUrl": "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg",
+      "verified": false,
+      "rating": 3.8,
+      "ratingsCount": 6,
+      "createdAt": "2024-11-05T16:20:00Z",
+      "updatedAt": "2024-12-01T16:20:00Z",
+      "active": true
+    }
+  },
+  "vaccinations": {
+    "vaccination1": {
+      "petId": "pet1",
+      "ownerId": "user1",
+      "title": "Rabies",
+      "date": "2025-12-01T00:00:00Z",
+      "completed": false,
+      "reminderSent": false,
+      "createdAt": "2024-06-01T10:00:00Z",
+      "updatedAt": "2024-12-01T10:00:00Z"
+    },
+    "vaccination2": {
+      "petId": "pet1",
+      "ownerId": "user1",
+      "title": "FVRCP",
+      "date": "2025-12-08T00:00:00Z",
+      "completed": false,
+      "reminderSent": true,
+      "createdAt": "2024-06-01T10:00:00Z",
+      "updatedAt": "2024-12-01T10:00:00Z"
+    },
+    "vaccination3": {
+      "petId": "pet2",
+      "ownerId": "user1",
+      "title": "Rabies",
+      "date": "2025-11-15T00:00:00Z",
+      "completed": true,
+      "reminderSent": true,
+      "createdAt": "2024-06-05T14:20:00Z",
+      "updatedAt": "2024-11-15T10:00:00Z"
+    },
+    "vaccination4": {
+      "petId": "pet2",
+      "ownerId": "user1",
+      "title": "FVRCP",
+      "date": "2025-12-20T00:00:00Z",
+      "completed": false,
+      "reminderSent": false,
+      "createdAt": "2024-06-05T14:20:00Z",
+      "updatedAt": "2024-12-01T14:20:00Z"
+    },
+    "vaccination5": {
+      "petId": "pet3",
+      "ownerId": "user1",
+      "title": "Rabies",
+      "date": "2025-12-12T00:00:00Z",
+      "completed": false,
+      "reminderSent": false,
+      "createdAt": "2024-07-10T09:30:00Z",
+      "updatedAt": "2024-12-01T09:30:00Z"
+    },
+    "vaccination6": {
+      "petId": "pet3",
+      "ownerId": "user1",
+      "title": "FVRCP",
+      "date": "2025-12-05T00:00:00Z",
+      "completed": true,
+      "reminderSent": true,
+      "createdAt": "2024-07-10T09:30:00Z",
+      "updatedAt": "2024-12-05T10:00:00Z"
+    },
+    "vaccination7": {
+      "petId": "pet4",
+      "ownerId": "user2",
+      "title": "Rabies",
+      "date": "2025-11-01T00:00:00Z",
+      "completed": true,
+      "reminderSent": true,
+      "createdAt": "2024-08-15T11:00:00Z",
+      "updatedAt": "2024-11-01T10:00:00Z"
+    },
+    "vaccination8": {
+      "petId": "pet4",
+      "ownerId": "user2",
+      "title": "DHPP",
+      "date": "2025-12-15T00:00:00Z",
+      "completed": false,
+      "reminderSent": false,
+      "createdAt": "2024-08-15T11:00:00Z",
+      "updatedAt": "2024-12-01T11:00:00Z"
+    },
+    "vaccination9": {
+      "petId": "pet5",
+      "ownerId": "user6",
+      "title": "Rabies",
+      "date": "2025-12-10T00:00:00Z",
+      "completed": false,
+      "reminderSent": false,
+      "createdAt": "2024-09-20T15:45:00Z",
+      "updatedAt": "2024-12-01T15:45:00Z"
+    },
+    "vaccination10": {
+      "petId": "pet5",
+      "ownerId": "user6",
+      "title": "FVRCP",
+      "date": "2025-12-20T00:00:00Z",
+      "completed": false,
+      "reminderSent": false,
+      "createdAt": "2024-09-20T15:45:00Z",
+      "updatedAt": "2024-12-01T15:45:00Z"
+    }
+  },
+  "conversations": {
+    "conv1": {
+      "participants": ["user1", "user2"],
+      "petId": "pet4",
+      "lastMessage": {
+        "text": "Max looks amazing! When can we arrange a meeting?",
+        "senderId": "user1",
+        "timestamp": "2024-12-01T15:30:00Z"
+      },
+      "unreadCount": {
+        "user1": 0,
+        "user2": 1
+      },
+      "createdAt": "2024-11-25T10:00:00Z",
+      "updatedAt": "2024-12-01T15:30:00Z"
+    },
+    "conv2": {
+      "participants": ["user1", "user6"],
+      "petId": "pet5",
+      "lastMessage": {
+        "text": "Luna is beautiful! I think they would be a perfect match.",
+        "senderId": "user1",
+        "timestamp": "2024-11-30T09:41:00Z"
+      },
+      "unreadCount": {
+        "user1": 0,
+        "user6": 2
+      },
+      "createdAt": "2024-11-28T14:00:00Z",
+      "updatedAt": "2024-11-30T09:41:00Z"
+    },
+    "conv3": {
+      "participants": ["user3", "user5"],
+      "petId": null,
+      "lastMessage": {
+        "text": "Thanks for adding that feeding point! Very helpful.",
+        "senderId": "user3",
+        "timestamp": "2024-11-29T16:20:00Z"
+      },
+      "unreadCount": {
+        "user3": 0,
+        "user5": 1
+      },
+      "createdAt": "2024-11-20T11:00:00Z",
+      "updatedAt": "2024-11-29T16:20:00Z"
+    }
+  },
+  "conversations_messages": {
+    "conv1": {
+      "msg1": {
+        "conversationId": "conv1",
+        "senderId": "user2",
+        "text": "Hi! I saw your interest in Max. He's a wonderful dog!",
+        "timestamp": "2024-11-25T10:05:00Z",
+        "read": true,
+        "readAt": "2024-11-25T10:10:00Z"
+      },
+      "msg2": {
+        "conversationId": "conv1",
+        "senderId": "user1",
+        "text": "Hello! Yes, I'm very interested. My pet would be perfect for breeding.",
+        "timestamp": "2024-11-25T10:15:00Z",
+        "read": true,
+        "readAt": "2024-11-25T10:20:00Z"
+      },
+      "msg3": {
+        "conversationId": "conv1",
+        "senderId": "user2",
+        "text": "Great! Can you tell me more about your pet?",
+        "timestamp": "2024-11-25T14:00:00Z",
+        "read": true,
+        "readAt": "2024-11-25T14:05:00Z"
+      },
+      "msg4": {
+        "conversationId": "conv1",
+        "senderId": "user1",
+        "text": "Max looks amazing! When can we arrange a meeting?",
+        "timestamp": "2024-12-01T15:30:00Z",
+        "read": false
+      }
+    },
+    "conv2": {
+      "msg1": {
+        "conversationId": "conv2",
+        "senderId": "user1",
+        "text": "This is the main chat template",
+        "timestamp": "2024-11-30T09:41:00Z",
+        "read": true,
+        "readAt": "2024-11-30T09:45:00Z"
+      },
+      "msg2": {
+        "conversationId": "conv2",
+        "senderId": "user6",
+        "text": "Oh?",
+        "timestamp": "2024-11-30T09:42:00Z",
+        "read": true,
+        "readAt": "2024-11-30T09:43:00Z"
+      },
+      "msg3": {
+        "conversationId": "conv2",
+        "senderId": "user6",
+        "text": "Cool",
+        "timestamp": "2024-11-30T09:43:00Z",
+        "read": true,
+        "readAt": "2024-11-30T09:44:00Z"
+      },
+      "msg4": {
+        "conversationId": "conv2",
+        "senderId": "user6",
+        "text": "How does it work?",
+        "timestamp": "2024-11-30T09:44:00Z",
+        "read": true,
+        "readAt": "2024-11-30T09:45:00Z"
+      },
+      "msg5": {
+        "conversationId": "conv2",
+        "senderId": "user1",
+        "text": "You just edit any text to type in the conversation you want to show, and delete any bubbles you don't want to use",
+        "timestamp": "2024-11-30T09:45:00Z",
+        "read": true,
+        "readAt": "2024-11-30T09:46:00Z"
+      },
+      "msg6": {
+        "conversationId": "conv2",
+        "senderId": "user1",
+        "text": "Luna is beautiful! I think they would be a perfect match.",
+        "timestamp": "2024-11-30T09:41:00Z",
+        "read": false
+      }
+    }
+  },
+  "likes": {
+    "like1": {
+      "userId": "user1",
+      "petId": "pet4",
+      "createdAt": "2024-11-20T10:00:00Z"
+    },
+    "like2": {
+      "userId": "user2",
+      "petId": "pet1",
+      "createdAt": "2024-11-22T14:30:00Z"
+    },
+    "like3": {
+      "userId": "user6",
+      "petId": "pet2",
+      "createdAt": "2024-11-25T09:15:00Z"
+    }
+  }
+}
+
