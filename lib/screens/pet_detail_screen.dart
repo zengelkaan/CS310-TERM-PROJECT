@@ -130,7 +130,7 @@ class _OwnerSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // If no owner ID, show unknown
+    
     if (petOwnerId.isEmpty) {
       return Row(
         children: [
