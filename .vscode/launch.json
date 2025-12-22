@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/hilal/cs310_term_project/windows/runner",
+      "program": "/Users/hilal/cs310_term_project/windows/runner/build/Debug/outDebug"
+    }
+  ]
+}
