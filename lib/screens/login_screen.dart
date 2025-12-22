@@ -31,7 +31,8 @@ class _LoginScreenState extends State<LoginScreen> {
       _isLogin = !_isLogin;
       _formKey.currentState?.reset();
     });
-    // Clear error when switching modes
+    // Clear error 
+  
     context.read<AuthProvider>().clearError();
   }
 
@@ -126,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   const SizedBox(height: 20),
 
-                  // Profile Avatar
+                  // Avatar
                   Container(
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
@@ -155,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   const SizedBox(height: 20),
 
-                  // Form Container
+                  // Container
                   Container(
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -174,7 +175,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Name field (only for signup)
+                          
+                          // Name field but only for signup
                           if (!_isLogin) ...[
                             const Text(
                               "Full Name:",
@@ -365,7 +367,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   const SizedBox(height: 16),
 
-                  // Forgot Password (only for login)
+                  // Forgot Password but only for login
                   if (_isLogin)
                     Align(
                       alignment: Alignment.centerLeft,
@@ -383,7 +385,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   const SizedBox(height: 16),
 
-                  // Toggle Login/Signup
+                  // Toggle Login-Signup
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
