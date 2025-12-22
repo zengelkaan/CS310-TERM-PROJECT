@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
       body: Column(
         children: [
-          // Logo
+          // Logo:
           Center(
             child: Container(
               margin: const EdgeInsets.symmetric(vertical: 20),
@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
           const SizedBox(height: 20),
 
-          // Grid Menu (6 Buttons)
+          // Menu 
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
