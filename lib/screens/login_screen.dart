@@ -15,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _passwordController = TextEditingController();
   final _nameController = TextEditingController();
   
-  bool _isLogin = true; // Toggle between Login and Sign Up
+  bool _isLogin = true; 
   bool _obscurePassword = true;
 
   @override
