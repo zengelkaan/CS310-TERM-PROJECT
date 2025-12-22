@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+
 import '../models/pet.dart';
+
 import '../providers/auth_provider.dart';
 import '../providers/pet_provider.dart';
+
 import '../widgets/custom_bottom_nav.dart';
 
 // COLORS
