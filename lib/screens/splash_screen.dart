@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
     _controller.forward();
 
-    // Navigate based on auth state after delay
+    
     Timer(const Duration(seconds: 3), () {
       _navigateBasedOnAuth();
     });
