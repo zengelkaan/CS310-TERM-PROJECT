@@ -32,7 +32,7 @@ class _FeedingPointsScreenState extends State<FeedingPointsScreen> {
             const SizedBox(height: 8),
             const MapPreview(),
             const SizedBox(height: 12),
-            // Real-time list from Firestore
+            // from Firestore
             Expanded(
               child: StreamBuilder<List<FeedingPoint>>(
                 stream: context.read<FeedingPointProvider>().streamFeedingPoints(),
@@ -206,7 +206,7 @@ class _TopSearchBarState extends State<TopSearchBar> {
             ],
           ),
           const SizedBox(height: 4),
-          // Search bar
+          // Search 
           Container(
             height: 44,
             decoration: BoxDecoration(
@@ -350,6 +350,8 @@ class FeedingPointCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+
+          
           // Image
           SizedBox(
             height: 180,
