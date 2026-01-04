@@ -166,6 +166,6 @@ flutter run
 
 ---
 
-## 📄 License
+##  License
 
 This project is for educational purposes (CS310 Term Project).
