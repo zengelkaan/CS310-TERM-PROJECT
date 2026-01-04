@@ -12,7 +12,7 @@ PetConnect is a mobile application designed to connect pet owners and animal lov
 
 ---
 
-## 🚀 Quick Start (Step 3)
+## Quick Start (Step 3)
 
 ### Prerequisites
 - Flutter SDK (3.9.0+)
@@ -37,35 +37,35 @@ That's it! Firebase is pre-configured.
 
 ---
 
-## 📱 Features (Step 3)
+##  Features (Step 3)
 
-### ✅ Firebase Authentication
+###  Firebase Authentication
 - Email/Password Sign Up
 - Email/Password Login
 - Logout
 - Password Reset
 - User-friendly error messages
 
-### ✅ Cloud Firestore Database
+###  Cloud Firestore Database
 - **Pets Collection**: Full CRUD operations
 - **Feeding Points Collection**: Full CRUD operations
 - **Users Collection**: User profiles
 - Real-time updates using Streams
 - Security rules for data protection
 
-### ✅ State Management (Provider)
+###  State Management (Provider)
 - `AuthProvider` - Authentication state
 - `PetProvider` - Pet data management
 - `FeedingPointProvider` - Feeding points management
 - `ThemeProvider` - Theme preferences
 
-### ✅ Local Persistence (SharedPreferences)
+### Local Persistence (SharedPreferences)
 - Dark/Light mode preference
 - Last selected tab
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 lib/
@@ -101,7 +101,7 @@ lib/
 
 ---
 
-## 🔥 Firebase Configuration
+##  Firebase Configuration
 
 Firebase is already configured with:
 - **Project ID**: cs310db
@@ -118,7 +118,7 @@ Firebase is already configured with:
 
 ---
 
-## 🎨 Theme Support
+##  Theme Support
 
 The app supports both Light and Dark themes:
 - Toggle in Profile screen
@@ -127,7 +127,7 @@ The app supports both Light and Dark themes:
 
 ---
 
-## 📝 How to Test
+##  How to Test
 
 1. **Sign Up**: Create a new account
 2. **Add Pet**: Go to Profile → Add New Pet
@@ -139,7 +139,7 @@ The app supports both Light and Dark themes:
 
 ---
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Build Issues
 ```bash
