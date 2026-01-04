@@ -123,6 +123,9 @@ lib/
 └── widgets/
     ├── custom_bottom_nav.dart          # Bottom navigation bar
     └── map_preview.dart                # Map widget
+
+test/
+└── model_test.dart                     # Unit tests for Pet and FeedingPoint models
 ```
 
 ## Firebase Configuration
@@ -206,32 +209,126 @@ Firebase is already configured with:
 
 ## Testing
 
+### Overview
+
+The PetConnect application has been thoroughly tested using both automated unit tests and comprehensive manual testing procedures. Our testing strategy ensures code quality, data integrity, and a reliable user experience.
+
+**Testing Summary:**
+- ✅ 4 automated unit tests for data models
+- ✅ Complete manual testing of all features
+- ✅ End-to-end user flow validation
+- ✅ Cross-platform testing (Android & iOS)
+- ✅ Edge case and error handling verification
+
 ### Automated Unit Tests
 
-The project includes comprehensive unit tests for core data models to ensure data integrity and correct functionality. Tests are located in `test/widget_test.dart`.
+The project includes comprehensive unit tests for core data models to ensure data integrity and correct functionality. All tests are implemented in `test/model_test.dart` and validate critical business logic and data handling.
 
-#### Test Coverage
+#### Test File Structure
 
-**Pet Model Tests (5 tests)**
-- Pet model creation with valid data
-- Pet model toMap conversion (object to Firestore format)
-- Pet model fromMap conversion (Firestore to object)
-- Pet adoption status toggle functionality
-- Pet name validation (non-empty check)
+**Location**: `test/model_test.dart`
+**Framework**: Flutter Test
+**Total Tests**: 4 unit tests organized in 2 test groups
 
-**Feeding Point Model Tests (5 tests)**
-- FeedingPoint model creation with valid data
-- FeedingPoint model toMap conversion
-- FeedingPoint model fromMap conversion
-- FeedingPoint location coordinates validation (latitude/longitude ranges)
-- FeedingPoint title validation (non-empty check)
+#### Detailed Test Coverage
 
-**Running Tests**
+**1. Pet Model Tests (2 tests)**
+
+##### Test 1: Pet model creation with valid data
+- **Purpose**: Validates that Pet objects can be instantiated with complete data and all properties are correctly assigned
+- **What it tests**:
+  - Pet ID assignment (`test_pet_1`)
+  - Pet name (`Max`)
+  - Pet type (`Dog`)
+  - Adoption status flag (`isAvailableForAdoption: true`)
+  - Creator ID tracking (`createdBy: user_123`)
+  - Non-empty name validation
+- **Expected behavior**: All properties should match the values passed to the constructor
+- **Assertions**: 6 expectations verifying each critical field
+
+##### Test 2: Pet adoption status can be toggled by creating a new object
+- **Purpose**: Ensures that the adoption status of a pet can be changed by creating a new Pet instance with updated values (immutable pattern)
+- **What it tests**:
+  - Initial adoption status (`false`)
+  - Ability to create updated pet with toggled status
+  - Data persistence across object creation
+  - Immutable object pattern
+- **Test scenario**:
+  1. Create a pet (`Buddy`) with `isAvailableForAdoption: false`
+  2. Create a new Pet object with same data but inverted adoption status
+  3. Verify original pet status remains `false`
+  4. Verify updated pet status is `true`
+- **Expected behavior**: Status should toggle from false to true without mutating original object
+- **Assertions**: 2 expectations using `isFalse` and `isTrue` matchers
+
+**2. Feeding Point Model Tests (2 tests)**
+
+##### Test 3: FeedingPoint model creation with valid data
+- **Purpose**: Validates that FeedingPoint objects can be created with complete geographic and descriptive data
+- **What it tests**:
+  - FeedingPoint ID assignment (`fp_1`)
+  - Title field (`Campus Feeding Point`)
+  - Geographic coordinates (latitude: 41.0082, longitude: 28.9784)
+  - Non-empty title validation
+- **Expected behavior**: All location and metadata fields should be correctly assigned
+- **Assertions**: 5 expectations verifying essential feeding point properties
+- **Real-world relevance**: Ensures feeding points can be accurately placed on maps
+
+##### Test 4: FeedingPoint coordinates are within valid ranges
+- **Purpose**: Validates that latitude and longitude values fall within geographically valid ranges
+- **What it tests**:
+  - Latitude validation (must be between -90.0 and 90.0 degrees)
+  - Longitude validation (must be between -180.0 and 180.0 degrees)
+  - Geographic coordinate boundaries
+- **Test scenario**: Create a feeding point with specific coordinates (Beach location: 34.0522, -118.2437)
+- **Expected behavior**: Coordinates should fall within valid Earth coordinate ranges
+- **Assertions**: 2 expectations using `inInclusiveRange` matcher
+- **Why this matters**: Prevents invalid geographic data that would cause mapping errors
+
+#### Running Tests
+
+Execute all unit tests with:
 ```bash
 flutter test
 ```
 
-All tests use the Arrange-Act-Assert pattern for clarity and follow Flutter testing best practices.
+Or run with verbose output:
+```bash
+flutter test --reporter expanded
+```
+
+To run only model tests:
+```bash
+flutter test test/model_test.dart
+```
+
+**Expected Output:**
+```
+00:02 +4: All tests passed!
+```
+
+All 4 tests should pass successfully, validating the Pet and FeedingPoint model implementations.
+
+#### Test Implementation Details
+
+**Design Pattern**: All tests follow the Arrange-Act-Assert (AAA) pattern:
+- **Arrange**: Set up test data and objects
+- **Act**: Perform the operation being tested
+- **Assert**: Verify the expected outcome
+
+**Best Practices Used**:
+- Clear, descriptive test names explaining what is being tested
+- Isolated test cases with no dependencies between tests
+- Use of Flutter's built-in matchers (`expect`, `isFalse`, `isTrue`, `inInclusiveRange`)
+- Test data uses realistic values (pet names, locations, coordinates)
+- Each test focuses on a single responsibility
+
+**Coverage Focus**:
+- ✅ Object instantiation and property assignment
+- ✅ Data validation (non-empty strings, coordinate ranges)
+- ✅ Business logic (adoption status toggle)
+- ✅ Immutability patterns
+- ✅ Geographic data integrity
 
 ### Manual Testing Coverage
 
@@ -334,13 +431,21 @@ In addition to automated unit tests, the application has been thoroughly tested 
 
 ### Testing Tools & Approach
 
-- **Automated Unit Testing**: 10 unit tests covering Pet and FeedingPoint models using Flutter test framework
+- **Automated Unit Testing**: 4 comprehensive unit tests covering Pet and FeedingPoint models using Flutter test framework
+  - Test file: `test/model_test.dart`
+  - 2 test groups (Pet Model Tests, Feeding Point Model Tests)
+  - Validates object creation, property assignment, business logic, and data validation
+  - Uses Flutter's built-in testing matchers and assertions
 - **Manual Testing**: All features tested on Android emulator/iOS simulator
 - **User Acceptance Testing**: Real-world usage scenarios validated
 - **Cross-Platform**: Tested on both Android and iOS platforms
-- **Firebase Console**: Backend data verification
-- **Error Logging**: Console output monitored for errors
-- **Test Coverage**: Focus on data model integrity, serialization, and validation
+- **Firebase Console**: Backend data verification through Firestore dashboard
+- **Error Logging**: Console output monitored for exceptions and warnings
+- **Test Coverage Areas**:
+  - Data model integrity and immutability
+  - Geographic coordinate validation
+  - Business logic (adoption status toggle)
+  - Non-empty field validation
 
 ### Known Limitations
 
